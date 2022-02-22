@@ -1,0 +1,70 @@
+{
+  "root": "apps/sample1",
+  "sourceRoot": "apps/sample1/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/sample1",
+        "index": "apps/sample1/src/index.html",
+        "baseHref": "/",
+        "main": "apps/sample1/src/main.tsx",
+        "polyfills": "apps/sample1/src/polyfills.ts",
+        "tsConfig": "apps/sample1/tsconfig.app.json",
+        "assets": ["apps/sample1/src/favicon.ico", "apps/sample1/src/assets"],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/sample1/src/environments/environment.ts",
+              "with": "apps/sample1/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "sample1:build",
+        "hmr": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "sample1:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/sample1/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/sample1"],
+      "options": {
+        "jestConfig": "apps/sample1/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
