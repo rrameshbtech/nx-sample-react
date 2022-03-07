@@ -1,14 +1,15 @@
 import { Theme, ThemeProvider } from '@emotion/react';
 import { Welcome1 } from '@nx-sample-react/lib1';
-import { ReactComponent as TeamLogo } from '../assets/team.svg';
+
+import {ReactComponent as TeamLogo} from '../assets/team.svg';
 const theme: Theme = {
   color: {
-    primary: 'Red',
+    primary: 'Green'
   },
   icons: {
-    team: TeamLogo,
-  },
-};
+    team: TeamLogo
+  }
+}
 
 export function App() {
   return (

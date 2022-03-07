@@ -1,7 +1,13 @@
 {
   "version": 2,
   "projects": {
+    "lib1": "libs/lib1",
+    "lib2": "libs/lib2",
+    "my-new-app": "apps/my-new-app",
+    "my-new-app-e2e": "apps/my-new-app-e2e",
     "sample1": "apps/sample1",
-    "sample1-e2e": "apps/sample1-e2e"
+    "sample1-e2e": "apps/sample1-e2e",
+    "sample2": "apps/sample2",
+    "sample2-e2e": "apps/sample2-e2e"
   }
 }
