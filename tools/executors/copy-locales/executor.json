@@ -1,0 +1,9 @@
+{
+  "executors": {
+    "copy-locales": {
+      "implementation": "./impl",
+      "schema": "./schema.json",
+      "description": "Copies locale files."
+    }
+  }
+}

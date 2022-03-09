@@ -2,6 +2,7 @@ import { Theme, ThemeProvider } from '@emotion/react';
 import styled from '@emotion/styled';
 import { Welcome1 } from '@nx-sample-react/lib1';
 import { ReactComponent as TeamLogo } from '../public/team.svg';
+import { enableServerTranslations } from '@nx-sample-react/lib1/server';
 
 const StyledPage = styled.div`
   .page {
@@ -26,6 +27,7 @@ export function Index() {
    *
    * Note: The corresponding styles are in the ./index.@emotion/styled file.
    */
+  
   return (
     <ThemeProvider {...{ theme }}>
       <StyledPage>
@@ -36,6 +38,15 @@ export function Index() {
       </StyledPage>
     </ThemeProvider>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await enableServerTranslations(locale, ['common', 'lib1'])),
+      // Will be passed to the page component as props
+    },
+  };
 }
 
 export default Index;

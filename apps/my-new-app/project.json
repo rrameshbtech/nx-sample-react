@@ -13,6 +13,18 @@
       },
       "configurations": {
         "production": {}
+      },
+      "dependsOn": [
+        {
+          "target": "locales",
+          "projects": "self"
+        }
+      ]
+    },
+    "locales": {
+      "executor": "./tools/executors/copy-locales:copy-locales",
+      "options": {
+        "libs": ["lib1"]
       }
     },
     "serve": {
@@ -26,7 +38,13 @@
           "buildTarget": "my-new-app:build:production",
           "dev": false
         }
-      }
+      },
+      "dependsOn": [
+        {
+          "target": "locales",
+          "projects": "self"
+        }
+      ]
     },
     "export": {
       "executor": "@nrwl/next:export",

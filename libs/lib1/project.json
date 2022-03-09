@@ -11,6 +11,16 @@
         "lintFilePatterns": ["libs/lib1/**/*.{ts,tsx,js,jsx}"]
       }
     },
+    "locales-copy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "cp"
+          }
+        ]
+      }
+    },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/lib1"],

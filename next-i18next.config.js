@@ -1,0 +1,1 @@
+./apps/my-new-app/next-i18next.config.js

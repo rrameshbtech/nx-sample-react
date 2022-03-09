@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@nx-sample-react/lib1": ["libs/lib1/src/index.ts"],
+      "@nx-sample-react/lib1/server": ["libs/lib1/src/server.ts"],
       "@nx-sample-react/lib2": ["libs/lib2/src/index.ts"]
     }
   },

@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "type": "object",
+  "cli": "nx",
+  "properties": {
+    "libs": {
+      "type": "array",
+      "description": "list of libs used by the application"
+    }
+  }
+}
