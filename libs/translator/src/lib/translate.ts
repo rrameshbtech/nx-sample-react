@@ -7,10 +7,11 @@ export function initI18N(
   customConfigs?: UserConfig
 ) {
   const config = override(defaultConfig, customConfigs);
+  console.info(config);
   return appWithTranslation(myApp, config);
 }
-export { useTranslation } from 'next-i18next';
 
+// export { useTranslation } from 'next-i18next';
 
 function override(baseConfig: UserConfig, customConfig?: UserConfig) {
   if(!customConfig) {

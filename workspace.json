@@ -8,6 +8,7 @@
     "sample1": "apps/sample1",
     "sample1-e2e": "apps/sample1-e2e",
     "sample2": "apps/sample2",
-    "sample2-e2e": "apps/sample2-e2e"
+    "sample2-e2e": "apps/sample2-e2e",
+    "translator": "libs/translator"
   }
 }

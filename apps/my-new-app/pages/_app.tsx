@@ -1,7 +1,8 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import './styles.css';
-import { initI18N } from '@nx-sample-react/lib1';
+import { initI18N } from '@nx-sample-react/translator';
+import config from 'next-i18next.config'
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
@@ -16,4 +17,5 @@ function CustomApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default initI18N(CustomApp);
+// export default CustomApp;
+export default initI18N(CustomApp, config);

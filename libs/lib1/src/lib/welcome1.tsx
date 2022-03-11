@@ -19,14 +19,14 @@ export function Welcome1(props: Welcome1Props) {
   const {
     icons: { team: TeamLogo },
   } = useTheme();
-  const { t } = useTranslation(['common','lib1']);
+  const { t } = useTranslation(['common', 'lib1']);
 
   return (
     <div css={welcomeStyle}>
       <TeamLogo css={logoStyle} title="Work as team"></TeamLogo>
       <h1>welcome to Lib1!</h1>
-          <div>Translated value {t('welcome-lib', {ns:'lib1'})}</div>
-          <div>Translated value {t('thanks')}</div>
+      <div>Translated value {t('welcome-lib', { ns: 'lib1' })}</div>
+      <div>Translated value {t('thanks')}</div>
     </div>
   );
 }

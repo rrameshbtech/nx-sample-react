@@ -1,6 +1,6 @@
 {
-  "root": "libs/lib1",
-  "sourceRoot": "libs/lib1/src",
+  "root": "libs/translator",
+  "sourceRoot": "libs/translator/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -8,14 +8,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/lib1/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["libs/translator/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/lib1"],
+      "outputs": ["coverage/libs/translator"],
       "options": {
-        "jestConfig": "libs/lib1/jest.config.js",
+        "jestConfig": "libs/translator/jest.config.js",
         "passWithNoTests": true
       }
     }

@@ -2,7 +2,8 @@ import { Theme, ThemeProvider } from '@emotion/react';
 import styled from '@emotion/styled';
 import { Welcome1 } from '@nx-sample-react/lib1';
 import { ReactComponent as TeamLogo } from '../public/team.svg';
-import { enableServerTranslations } from '@nx-sample-react/lib1/server';
+import { enableServerTranslations } from '@nx-sample-react/translator/server';
+import config from 'next-i18next.config'
 
 const StyledPage = styled.div`
   .page {
@@ -43,7 +44,7 @@ export function Index() {
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await enableServerTranslations(locale, ['common', 'lib1'])),
+      ...(await enableServerTranslations(locale, ['common', 'lib1'], config)),
       // Will be passed to the page component as props
     },
   };

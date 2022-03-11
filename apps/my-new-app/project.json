@@ -24,7 +24,7 @@
     "locales": {
       "executor": "./tools/executors/copy-locales:copy-locales",
       "options": {
-        "libs": ["lib1"]
+        "libs": ["translator", "lib1"]
       }
     },
     "serve": {
