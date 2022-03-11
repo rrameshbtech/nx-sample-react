@@ -1,0 +1,4 @@
+fileignoreconfig:
+- filename: docs/nx-theme-icons-architecure.svg
+  checksum: b3c377ab8f6df4c9182858f11eeef3dd1d0e83410af42aced1c95e6275b208bb
+version: ""
