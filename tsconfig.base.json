@@ -14,6 +14,8 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "paths": {
       "@nx-sample-react/lib1": ["libs/lib1/src/index.ts"],
       "@nx-sample-react/lib2": ["libs/lib2/src/index.ts"],

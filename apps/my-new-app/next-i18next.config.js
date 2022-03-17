@@ -5,7 +5,7 @@ module.exports = {
     defaultLocale: 'de',
     locales: ['en', 'de'],
   },
-  ns: ["common", "lib1"],
+  ns: ["common", "lib1", "app"],
   debug: true,
   serializeConfig:false,
   localePath: path.resolve('./apps/my-new-app/public/locales/'),

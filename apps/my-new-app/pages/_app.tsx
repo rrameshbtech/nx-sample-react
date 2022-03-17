@@ -17,5 +17,4 @@ function CustomApp({ Component, pageProps }: AppProps) {
   );
 }
 
-// export default CustomApp;
 export default initI18N(CustomApp, config);

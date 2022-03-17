@@ -11,10 +11,8 @@ export function initI18N(
   return appWithTranslation(myApp, config);
 }
 
-// export { useTranslation } from 'next-i18next';
-
 function override(baseConfig: UserConfig, customConfig?: UserConfig) {
-  if(!customConfig) {
+  if (!customConfig) {
     return baseConfig;
   }
 
